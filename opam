@@ -13,9 +13,8 @@ depends: [
  "ocamlbuild" {build}
  "topkg" {build}
 ]
-depopts: [ "js_of_ocaml" ]
 conflicts: [ "js_of_ocaml" { < "3.3.0" } ]
 build:[[
    "ocaml" "pkg/pkg.ml" "build"
    "--pinned" "%{pinned}%"
-   "--with-js_of_ocaml" "%{js_of_ocaml:installed}%" ]]
+   "--with-js_of_ocaml" "%{false}%" ]]
